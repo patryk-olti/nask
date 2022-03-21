@@ -56,7 +56,6 @@ const HistoryForm = ({ refProp, handleOpen, handleClose, history, isEmpty, clear
                             }
                         })
                 }
-                    
                 </div>
 
                 <button className={styles.historyForm__content_button} onClick={clearHistory} > Wyczyść historię </button>
@@ -68,9 +67,9 @@ const HistoryForm = ({ refProp, handleOpen, handleClose, history, isEmpty, clear
                     icon={faTimes} 
                     className={styles.historyForm__toggleButton__icon}    
                 /> 
-            : null }
+            : <div className={styles.historyForm__toggleButton__icon}> </div> }
 
-             Historia </div>
+            <span className={styles.historyForm__toggleButton__text}>Historia</span> </div>
         </div>
     )
 }

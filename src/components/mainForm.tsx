@@ -142,7 +142,7 @@ function MainForm({ refProp, history, addNewFormat }: any) {
     return(
         <div className={styles.mainForm} ref={refProp} >
             <div className={styles.mainForm__inner}>
-                <Span fontSize='28' >Konwerter walut</Span>
+                <Span fontSize='1.6' >Konwerter walut</Span>
 
                 <form 
                     className={styles.mainForm__inner__form}
@@ -163,12 +163,8 @@ function MainForm({ refProp, history, addNewFormat }: any) {
                     <p>{errors.inputVal?.message}</p>
 
                     <p className={styles.output} >
-                        <span>
-                            {result !== 0 ? result : 'wynik'} 
-                        </span>
-                        <span>
-                            {currency}
-                        </span>
+                        <span> {result !== 0 ? result : 'wynik'} </span>
+                        <span> {currency} </span>
                     </p>
 
                     <div className={styles.container__select}>
@@ -181,7 +177,10 @@ function MainForm({ refProp, history, addNewFormat }: any) {
                             }
                         </select>
 
-                        <div className={styles.mainForm__icon}> <FontAwesomeIcon icon={faExchangeAlt} />  </div>
+                        <div 
+                            className={styles.mainForm__icon}
+                            onClick={ () => console.log('elo')}
+                        > <FontAwesomeIcon icon={faExchangeAlt} />  </div>
 
                         <select
                             {...register('toCurrency')}

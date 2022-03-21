@@ -1,6 +1,7 @@
 {
   "name": "wallet",
   "version": "0.1.0",
+  "homepage": "https://patryk-olti.github.io/nask/",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
@@ -13,6 +14,7 @@
     "@types/node": "^16.11.21",
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
+    "gh-pages": "^3.2.3",
     "gsap": "^3.9.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -25,6 +27,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

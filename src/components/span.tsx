@@ -1,7 +1,7 @@
-const Span = ({ children, fontSize }) => {
+const Span = ({ children, fontSize }: any) => {
 
     const styles = {
-        fontSize: `${fontSize}px`,
+        fontSize: `${fontSize}rem`,
         color: `#3174e5`,
         fontWeight: 'bold',
         letterSpacing: '1px',
